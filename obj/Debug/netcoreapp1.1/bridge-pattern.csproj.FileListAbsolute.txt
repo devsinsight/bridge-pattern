@@ -1,0 +1,8 @@
+C:\Projects\Belatrix\bridge-pattern\bin\Debug\netcoreapp1.1\bridge-pattern.deps.json
+C:\Projects\Belatrix\bridge-pattern\bin\Debug\netcoreapp1.1\bridge-pattern.runtimeconfig.json
+C:\Projects\Belatrix\bridge-pattern\bin\Debug\netcoreapp1.1\bridge-pattern.runtimeconfig.dev.json
+C:\Projects\Belatrix\bridge-pattern\bin\Debug\netcoreapp1.1\bridge-pattern.dll
+C:\Projects\Belatrix\bridge-pattern\bin\Debug\netcoreapp1.1\bridge-pattern.pdb
+C:\Projects\Belatrix\bridge-pattern\obj\Debug\netcoreapp1.1\bridge-pattern.AssemblyInfo.cs
+C:\Projects\Belatrix\bridge-pattern\obj\Debug\netcoreapp1.1\bridge-pattern.dll
+C:\Projects\Belatrix\bridge-pattern\obj\Debug\netcoreapp1.1\bridge-pattern.pdb
