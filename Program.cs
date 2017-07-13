@@ -15,7 +15,7 @@ namespace bridge_pattern
 
             //order!
             var orderSimpleCombo = new OrderCombo(simpleCombo, 3);
-            var orderSuperCombo = new OrderCombo(superCombo, 4);
+            var orderSuperCombo = new OrderCombo(superCombo, 1);
 
             orders.Add(orderSimpleCombo);
             orders.Add(orderSuperCombo);

@@ -3,11 +3,14 @@ interface ICombo {
     + string Name
     + decimal Price
     + string Description
+    
     + decimal GetDiscount()
 }
 
 interface IOrder {
     + int Quantity
+
+    + void Print()
 }
 
 class OrderCombo extends Order {
