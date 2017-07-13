@@ -10,7 +10,6 @@ namespace bridge_pattern
             //setting combos
             var simpleCombo = new SimpleCombo(9.99M, "Two pieces of fried chicken, fried potatos and soda.");
             var superCombo = new SuperCombo(29.50m, "Three pieces of fried chicken, fried potatos and extra large soda.");
-
             List<Order> orders = new List<Order>();
 
             //order!
