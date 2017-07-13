@@ -1,19 +1,14 @@
-using System;
-
 namespace bridge_pattern
 {
     public class SuperCombo : Combo
     {
-        public SuperCombo(IDiscount discount) : base(discount)
+        public SuperCombo(decimal price, string description) : base(nameof(SuperCombo), price, description)
         {
         }
 
-        public override void Print()
+        public override decimal GetDiscount(int quantity)
         {
-            Console.WriteLine("Super Combo");
-            Console.WriteLine("-----------");
-            Console.WriteLine("Price: $ {0}", discount.GetDiscount(Price, Quantity));
-            Console.WriteLine();
+            return quantity > 3 ? Price * quantity * 0.2M : 0;
         }
     }
 }

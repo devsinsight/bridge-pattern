@@ -1,0 +1,22 @@
+@startuml
+interface ICombo {
+    + string Name
+    + decimal Price
+    + string Description
+    + decimal GetDiscount()
+}
+
+interface IOrder {
+    + int Quantity
+}
+
+class OrderCombo extends Order {
+    + ICombo Combo
+}
+
+ICombo <|.. Combo
+IOrder <|.. Order
+Combo <|-- SimpleCombo
+Combo <|-- SuperCombo
+
+@enduml

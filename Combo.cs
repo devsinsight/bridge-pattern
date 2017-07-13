@@ -1,17 +1,21 @@
+using System;
+
 namespace bridge_pattern
 {
-    public abstract class Combo
+    public abstract class Combo : ICombo
     {
-        public int Quantity { get; set; }
+        public string Name { get; set; }
         public decimal Price { get; set; }
-        protected readonly IDiscount discount;
+        public string Description { get; set; }
 
-        public Combo(IDiscount discount)
+        public Combo(string name, decimal price, string description)
         {
-            this.discount = discount;
+            this.Name = name;
+            this.Price = price;
+            this.Description = description;
+
         }
 
-        abstract public void Print();
-
+        public abstract decimal GetDiscount(int quantity);
     }
 }

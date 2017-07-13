@@ -7,29 +7,24 @@ namespace bridge_pattern
     {
         static void Main(string[] args)
         {
-            List<Combo> combos = new List<Combo>();
-            var thirtyPercentDiscount = new ThirtyPercentDiscount();
-            var twentyPercentDiscount = new ThirtyPercentDiscount();
+            //setting combos
+            var simpleCombo = new SimpleCombo(9.99M, "Two pieces of fried chicken, fried potatos and soda.");
+            var superCombo = new SuperCombo(29.50m, "Three pieces of fried chicken, fried potatos and extra large soda.");
 
-            var simpleCombo = new SimpleCombo(thirtyPercentDiscount){
-                Price = 50.0M,
-                Quantity = 4
-            };
+            List<Order> orders = new List<Order>();
 
-            combos.Add(simpleCombo);
+            //order!
+            var orderSimpleCombo = new OrderCombo(simpleCombo, 3);
+            var orderSuperCombo = new OrderCombo(superCombo, 4);
 
-            var superCombo = new SuperCombo(twentyPercentDiscount){
-                Price = 80.0M,
-                Quantity = 4
-            };
+            orders.Add(orderSimpleCombo);
+            orders.Add(orderSuperCombo);
 
-            combos.Add(superCombo);
-
-            foreach(var combo in combos)
+            //results
+            foreach(var order in orders)
             {
-                combo.Print();
-            };
-
+                order.Print();
+            }
         }
     }
 }

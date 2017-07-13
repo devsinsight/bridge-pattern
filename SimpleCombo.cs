@@ -2,18 +2,15 @@ using System;
 
 namespace bridge_pattern
 {
-    public class SimpleCombo : Combo
+    public class SimpleCombo : Combo   
     {
-        public SimpleCombo(IDiscount discount) : base(discount)
+        public SimpleCombo(decimal price, string description) : base(nameof(SimpleCombo), price, description)
         {
         }
 
-        public override void Print()
+        public override decimal GetDiscount(int quantity)
         {
-            Console.WriteLine("Simple Combo");
-            Console.WriteLine("------------");
-            Console.WriteLine("Price: $ {0}", discount.GetDiscount(Price, Quantity));
-            Console.WriteLine();
+            return quantity > 2 ? Price * quantity * 0.3M : 0;
         }
     }
 }
