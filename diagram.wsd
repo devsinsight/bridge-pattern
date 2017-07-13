@@ -7,19 +7,18 @@ interface ICombo {
     + decimal GetDiscount()
 }
 
-interface IOrder {
+class Order {
+    + ICombo Combo
     + int Quantity
 
     + void Print()
 }
 
-class OrderCombo extends Order {
-    + ICombo Combo
-}
 
 ICombo <|.. Combo
-IOrder <|.. Order
+Order <|.. OrderCombo
 Combo <|-- SimpleCombo
 Combo <|-- SuperCombo
+Order o-- Combo
 
 @enduml
