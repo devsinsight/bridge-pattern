@@ -1,0 +1,17 @@
+@startuml
+class Order {
+    + int Quantity
+    + void Print()
+}
+
+interface ICombo {
+    + string Name
+    + decimal Price
+    + string Description
+
+    + GetDiscount()
+}
+
+ICombo <|.. Order
+
+@enduml

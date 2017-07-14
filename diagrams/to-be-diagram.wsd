@@ -1,0 +1,26 @@
+@startuml
+
+class Order {
+    + ICombo Combo
+    + int Quantity
+
+    + void Print()
+}
+
+class Combo {
+    + string Name
+    + decimal Price
+    + string Description
+    
+    + decimal GetDiscount()
+}
+
+
+Combo <|-- SimpleCombo
+Combo <|-- SuperCombo
+Order <|.. OrderCombo
+
+
+Combo o-- Order
+
+@enduml

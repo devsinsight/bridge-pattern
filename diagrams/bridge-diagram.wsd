@@ -1,0 +1,20 @@
+@startuml
+
+class Order {
+    + ICombo Combo
+    + int Quantity
+
+    + void Print()
+}
+
+class Combo {
+    + string Name
+    + decimal Price
+    + string Description
+    
+    + decimal GetDiscount()
+}
+
+Combo o-- Order
+
+@enduml
