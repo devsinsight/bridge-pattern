@@ -4,8 +4,11 @@ namespace bridge_pattern
 {
     public class OrderCombo : Order
     {
-        public OrderCombo(ICombo combo, int quantity) : base(combo, quantity)
+
+        private readonly Combo Combo;
+        public OrderCombo(Combo combo, int quantity) : base(quantity)
         {
+            Combo = combo;
         }
 
         public override void Print()

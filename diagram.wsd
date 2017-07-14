@@ -19,6 +19,7 @@ ICombo <|.. Combo
 Order <|.. OrderCombo
 Combo <|-- SimpleCombo
 Combo <|-- SuperCombo
+
 Order o-- Combo
 
 @enduml

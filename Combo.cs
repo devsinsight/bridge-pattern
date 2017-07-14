@@ -2,7 +2,7 @@ using System;
 
 namespace bridge_pattern
 {
-    public abstract class Combo : ICombo
+    public abstract class Combo
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
